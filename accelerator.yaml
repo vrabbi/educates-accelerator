@@ -14,12 +14,6 @@ accelerator:
       defaultValue: ""
       required: true
       description: The short description for the workshop that will show up in the catalog
-    - name: workshopFilesUrl
-      inputType: text
-      label: Workshop Git Source
-      defaultValue: "github.com/vrabbi/workshop-sample"
-      required: true
-      description: the git url (without protocol) for pulling down the files of the session
     - name: difficulty
       inputType: select
       label: Difficulty
@@ -304,8 +298,6 @@ engine:
       - type: RewritePath
         regex: WORKSHOP_README.md
         rewriteTo: "'README.md'"
-    - include: ["workshop/setup.d/connect-vcluster.sh"]
-      condition: "#useVcluster"
     - include: ["workshop/setup.d/install-kubectl-plugins.sh"]
       condition: "#installKrewAndPlugins"
     - include: ["workshop/content/setup-environment.md","workshop/content/workshop-overview.md","workshop/content/workshop-summary.md","workshop/setup.d/setup-resources.sh"]
