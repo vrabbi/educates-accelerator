@@ -164,21 +164,12 @@ accelerator:
       required: true
       description: The names of the exercises in your workshop
       label: List Of Workshop Exercise Names
-    - name: advancedSettings
-      dataType: boolean
-      inputType: checkbox
-      defaultValue: false
-      label: Configure Advanced Settings
-      description: Allows configuration of some additional advanced settings
     - name: installKrewAndPlugins
       label: Install usefull kubectl plugins
       description: installs krew and common plugins (neat, creyaml, view-secret, ns, ctx, tree, view-serviceaccount-kubeconfig, df-pv, split-yaml)
       dataType: boolean
       inputType: checkbox
       defaultValue: false
-      dependsOn:
-        name: advancedSettings
-        value: true
 engine:
   merge:
     - include: ["resources/workshop.yaml"]

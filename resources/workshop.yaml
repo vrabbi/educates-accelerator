@@ -29,18 +29,24 @@ spec:
         enabled: #@ data.values.enableConsole
       docker:
         enabled: #@ data.values.enableDocker
+        #@ if data.values.enableDocker:
         memory: #@ "{}Mi".format(data.values.dockerMemory)
         storage: #@ "{}Gi".format(data.values.dockerStorage)
+        #@ end
       editor:
         enabled: #@ data.values.enableEditor
       registry:
         enabled: #@ data.values.enableRegistry
+        #@ if data.values.enableRegistry:
         memory: #@ "{}Mi".format(data.values.registryMemory)
         storage: #@ "{}Gi".format(data.values.registryStorage)
+        #@ end
       vcluster:
         enabled: #@ data.values.useVcluster
       terminal:
         enabled: #@ data.values.enableTerminal
+        #@ if data.values.enableTerminal:
         layout: #@ data.values.terminalLayout
+        #@ end
     namespaces:
       budget: #@ data.values.namespaceBudget
