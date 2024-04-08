@@ -293,6 +293,116 @@ engine:
       - type: RewritePath
         regex: workshop/content/exercises/9.md
         rewriteTo: "'workshop/content/exercises/' + #exercises[9].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/10.md"]
+      condition: "#exercises.size() > 10"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[10]"
+      - type: RewritePath
+        regex: workshop/content/exercises/10.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[10].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/11.md"]
+      condition: "#exercises.size() > 11"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[11]"
+      - type: RewritePath
+        regex: workshop/content/exercises/11.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[11].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/12.md"]
+      condition: "#exercises.size() > 12"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[12]"
+      - type: RewritePath
+        regex: workshop/content/exercises/12.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[12].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/13.md"]
+      condition: "#exercises.size() > 13"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[13]"
+      - type: RewritePath
+        regex: workshop/content/exercises/13.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[13].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/14.md"]
+      condition: "#exercises.size() > 14"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[14]"
+      - type: RewritePath
+        regex: workshop/content/exercises/14.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[14].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/15.md"]
+      condition: "#exercises.size() > 15"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[15]"
+      - type: RewritePath
+        regex: workshop/content/exercises/15.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[15].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/16.md"]
+      condition: "#exercises.size() > 16"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[16]"
+      - type: RewritePath
+        regex: workshop/content/exercises/16.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[16].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/17.md"]
+      condition: "#exercises.size() > 17"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[17]"
+      - type: RewritePath
+        regex: workshop/content/exercises/17.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[17].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/18.md"]
+      condition: "#exercises.size() > 18"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[18]"
+      - type: RewritePath
+        regex: workshop/content/exercises/18.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[18].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/19.md"]
+      condition: "#exercises.size() > 19"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[19]"
+      - type: RewritePath
+        regex: workshop/content/exercises/19.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[19].replaceAll(' ', '-').toLowerCase() + '.md'"
+    - include: ["workshop/content/exercises/20.md"]
+      condition: "#exercises.size() > 20"
+      chain:
+      - type: ReplaceText
+        substitutions:
+        - text: "replace me"
+          with: "'# ' + #exercises[20]"
+      - type: RewritePath
+        regex: workshop/content/exercises/11.md
+        rewriteTo: "'workshop/content/exercises/' + #exercises[20].replaceAll(' ', '-').toLowerCase() + '.md'"
     - include: ["WORKSHOP_README.md"]
       chain:
       - type: RewritePath
